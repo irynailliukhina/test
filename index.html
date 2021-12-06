@@ -5,16 +5,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Fun</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <h1>Powers of the 2</h1>
+    <h1>X&#178; = number</h1>
     <form>
-        <input placeholder="put your number here">
-        <button  onclick="findX()">Find X</button>
+        <input placeholder="put your number here" class="number">
+        <input placeholder="put your power here" class="power">
+        <button  onclick="findX(event)">Find X</button>
     </form>
 
-    <div class="result"></div>
+    <div class="result"> Result </div>
 
 <script src="index.js"></script>
 </body>

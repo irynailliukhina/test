@@ -1,37 +1,21 @@
-
-
-
-
-function findX(){
+function findX(event) {
     event.preventDefault()
-    let number = document.querySelector('input').value
-
-    console.log(document.querySelector('input').value)
-
     let i
+    let number = document.querySelector('.number').value
+    let power = document.querySelector('.power').value
 
-    if(typeof +number !== 'number'  ){
-
-        alert('This is not a proper number')
-    } else {
-        console.log('Yes')
-        console.log(typeof number)
-
-    }
-
-    if (!Number.isInteger(number / 2) ){
-        alert('This is not a proper number')
-    } else {
-        for ( i = 0; +number > 1; i++ ){
-
-            number = number / 2
-            console.log(number)
+    for (i = 1; +number > power-1; i++) {
+        if (!Number.isInteger(number / power)) {
+            document.querySelector('.result').innerHTML = 'Error, try again'
+            alert('This is not a proper number')
+            i = 0
+            break
         }
-        console.log(i)
+
+        number = number / power
         document.querySelector('.result').innerHTML = i
-
-        return i
     }
-
 
 }
+
+
